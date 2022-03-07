@@ -1,0 +1,5 @@
+node_modules
+dist
+.parcel-cache
+architecture-plan-example.PNG
+expense-tracker-app-flowchart.png

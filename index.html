@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="src/css/main.css" />
+    <script defer type="module" src="src/js/controller.js"></script>
+
+    <title>Expense Tracker app</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="main__title">Expense Tracker</h1>
+
+      <form class="expense__form">
+        <h2>Add a New Item:</h2>
+        <label for="expense__form--name">Name:</label>
+        <input
+          type="text"
+          name="name"
+          id="expense__form--name"
+          placeholder="Where was the expense made?"
+        />
+        <br />
+        <label for="expense__form--date">Date:</label>
+        <input type="date" name="date" id="expense__form--date" />
+
+        <label for="expense__form--amount">Amount:</label>
+        <input
+          type="text"
+          name="amount"
+          id="expense__form--amount"
+          placeholder="(in euros)"
+        />
+        <br />
+        <button class="btn btn--add__expense"><span>Add Expense</span></button>
+      </form>
+
+      <table class="expenses__table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="no__entries"><span>No expenses added yet!</span></div>
+    </div>
+  </body>
+</html>
