@@ -5,40 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="src/css/main.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
     <script defer type="module" src="src/js/controller.js"></script>
 
     <title>Expense Tracker app</title>
   </head>
   <body>
     <div class="container">
-      <h1 class="main__title">Expense Tracker</h1>
+      <h1>Expense Tracker</h1>
 
-      <form class="expense__form">
+      <form class="expense-form">
         <h2>Add a New Item:</h2>
-        <label for="expense__form--name">Name:</label>
+
+        <label for="expense-form__name">Name:</label>
         <input
           type="text"
           name="name"
-          id="expense__form--name"
+          id="expense-form__name"
+          class="expense-form__name"
           placeholder="Where was the expense made?"
         />
         <br />
-        <label for="expense__form--date">Date:</label>
-        <input type="date" name="date" id="expense__form--date" />
 
-        <label for="expense__form--amount">Amount:</label>
+        <label for="expense-form__date">Date:</label>
+        <input
+          type="date"
+          name="date"
+          id="expense-form__date"
+          class="expense-form__date"
+        />
+
+        <label for="expense-form__amount">Amount:</label>
         <input
           type="text"
           name="amount"
-          id="expense__form--amount"
+          id="expense-form__amount"
+          class="expense-form__amount"
           placeholder="(in euros)"
         />
         <br />
-        <button class="btn btn--add__expense"><span>Add Expense</span></button>
+        <button class="expense-form__btn--add"><span>Add Expense</span></button>
       </form>
 
-      <table class="expenses__table">
+      <table class="expense-table">
         <thead>
           <tr>
             <th>Name</th>
@@ -49,7 +58,7 @@
         </thead>
         <tbody></tbody>
       </table>
-      <div class="no__entries"><span>No expenses added yet!</span></div>
+      <div class="no-entries"><span>No expenses added yet!</span></div>
     </div>
   </body>
 </html>

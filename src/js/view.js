@@ -1,7 +1,7 @@
 class View {
-  #formElement = document.querySelector(".expense__form");
-  #noEntriesMessageElement = document.querySelector(".no__entries");
-  #tableElement = document.querySelector(".expenses__table");
+  #formElement = document.querySelector(".expense-form");
+  #noEntriesMessageElement = document.querySelector(".no-entries");
+  #tableElement = document.querySelector(".expense-table");
   #data;
 
   addHandlerAddExpense(handler) {
@@ -18,7 +18,7 @@ class View {
     this.#tableElement.addEventListener(
       "click",
       function (e) {
-        const button = e.target.closest(".btn--delete__expense");
+        const button = e.target.closest(".expense-table__btn--delete");
         if (!button) return;
         const entry = button.closest("tr");
         entry.parentElement.removeChild(entry);
@@ -41,7 +41,7 @@ class View {
           <td>${this.#data.name}</td>
           <td>${this.#data.date}</td>
           <td>${this.#data.amount}€</td>
-          <td><button class="btn btn--delete__expense">X</button></td>
+          <td><button class="expense-table__btn--delete">X</button></td>
         </tr>
     `;
   }
